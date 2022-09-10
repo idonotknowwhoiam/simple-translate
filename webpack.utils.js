@@ -21,6 +21,12 @@ const getHTMLPlugins = (browserDir, outputDir = "dev", sourceDir = "src") => [
     filename: path.resolve(__dirname, `${outputDir}/${browserDir}/options/index.html`),
     template: `${sourceDir}/options/index.html`,
     chunks: ["options"]
+  }),
+  new HtmlWebpackPlugin({
+    title: "Dictionary",
+    filename: path.resolve(__dirname, `${outputDir}/${browserDir}/dictionary/index.html`),
+    template: `${sourceDir}/dictionary/index.html`,
+    chunks: ["dictionary"]
   })
 ];
 
@@ -36,6 +42,7 @@ const getEntry = (sourceDir = "src") => {
     popup: path.resolve(__dirname, `${sourceDir}/popup/index.js`),
     options: path.resolve(__dirname, `${sourceDir}/options/index.js`),
     content: path.resolve(__dirname, `${sourceDir}/content/index.js`),
+    dictionary: path.resolve(__dirname, `${sourceDir}/dictionary/index.js`),
     background: path.resolve(__dirname, `${sourceDir}/background/background.js`)
   };
 };

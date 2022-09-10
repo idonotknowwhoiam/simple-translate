@@ -300,6 +300,37 @@ export default [
     ]
   },
   {
+    category: "dictionaryLabel",
+    elements: [
+      {
+        id: "isDictEnable",
+        title: "isDictionaryEnableLabel",
+        captions: [],
+        type: "checkbox",
+        default: true
+      }
+    ]
+  },
+  {
+    category: "otherLabel",
+    elements: [
+      {
+        id: "isShowOptionsPageWhenUpdated",
+        title: "isShowOptionsPageWhenUpdatedLabel",
+        captions: ["isShowOptionsPageWhenUpdatedCaptionLabel"],
+        type: "checkbox",
+        default: true
+      },
+      {
+        id: "isDebugMode",
+        title: "isDebugModeLabel",
+        captions: ["isDebugModeCaptionLabel"],
+        type: "checkbox",
+        default: false
+      }
+    ]
+  },
+  {
     category: "pageTranslationLabel",
     elements: [
       {
@@ -550,25 +581,6 @@ export default [
             default: getTheme() === "light" ? BG_COLOR_LIGHT : BG_COLOR_DARK,
           },
         ]
-      }
-    ]
-  },
-  {
-    category: "otherLabel",
-    elements: [
-      {
-        id: "isShowOptionsPageWhenUpdated",
-        title: "isShowOptionsPageWhenUpdatedLabel",
-        captions: ["isShowOptionsPageWhenUpdatedCaptionLabel"],
-        type: "checkbox",
-        default: true
-      },
-      {
-        id: "isDebugMode",
-        title: "isDebugModeLabel",
-        captions: ["isDebugModeCaptionLabel"],
-        type: "checkbox",
-        default: false
       }
     ]
   }

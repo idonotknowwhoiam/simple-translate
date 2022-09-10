@@ -329,6 +329,9 @@
   "otherLabel": {
     "message": "Other"
   },
+  "dictionaryLabel": {
+    "message": "Dictionary"
+  },
   "isShowOptionsPageWhenUpdatedLabel": {
     "message": "Display option page when updating"
   },
@@ -451,6 +454,9 @@
   },
   "translatePageMenu": {
     "message": "Translate this page"
+  },
+  "isDictionaryEnableLabel": {
+    "message": "Enable dictionary."
   },
   "translateTextMenu": {
     "message": "Translate selected text"

@@ -1,0 +1,64 @@
+.light-theme {
+    --main-text: #0c0c0d;
+    --sub-text: #737373;
+    --line: #ededf0;
+    --button: #d7d7db;
+    --highlight: #5595ff;
+    --main-bg: #ffffff;
+    --sub-bg: #ffffff;
+    --new: #ff4f4f;
+}
+
+.dark-theme {
+    --main-text: #e6e6e6;
+    --sub-text: #aaaaaa;
+    --line: #373737;
+    --button: #929292;
+    --highlight: #5595ff;
+    --main-bg: #181818;
+    --sub-bg: #101010;
+    --new: #ed5f5f;
+}
+
+.system-theme {
+    --main-text: #0c0c0d;
+    --sub-text: #737373;
+    --line: #ededf0;
+    --button: #d7d7db;
+    --highlight: #5595ff;
+    --main-bg: #ffffff;
+    --sub-bg: #ffffff;
+    --new: #ff4f4f;
+}
+
+@media (prefers-color-scheme: dark) {
+    .system-theme {
+        --main-text: #e6e6e6;
+        --sub-text: #aaaaaa;
+        --line: #373737;
+        --button: #929292;
+        --highlight: #5595ff;
+        --main-bg: #181818;
+        --sub-bg: #101010;
+        --new: #ed5f5f;
+    }
+}
+
+body {
+    background-color: var(--main-bg);
+}
+
+.dictionaryPage {
+    font-family: "Segoe UI", "San Francisco", "Ubuntu", "Fira Sans", "Roboto",
+        "Arial", "Helvetica", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--main-text);
+    line-height: 1.5;
+    display: flex;
+    justify-content: center;
+    margin: 20px 40px;
+    &.rtl-language {
+        direction: rtl;
+    }
+}

@@ -1,0 +1,16 @@
+.dictionaryItem {
+    & + & {
+        margin-top: 10px;
+    }
+
+    span {
+        margin-right: 10px;
+    }
+
+    button {
+        background: 0;
+        border: 0;
+        color: var(--main-text);
+        margin-right: 15px;
+    }
+}

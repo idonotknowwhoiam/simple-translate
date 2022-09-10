@@ -56,7 +56,9 @@
     }
   ],
   "web_accessible_resources": [
-    "icons/512.png"
+    "icons/512.png",
+    "icons/plus.png",
+    "icons/tick.png"
   ],
   "commands": {
     "_execute_browser_action": {

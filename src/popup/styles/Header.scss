@@ -85,6 +85,15 @@
       }
     }
 
+    .dictButton {
+      display: flex;
+      align-items: center;
+      margin: 0px 10px 0 0;
+      &:hover svg {
+        fill: var(--confirm);
+      }
+    }
+
     .settingsButton {
       display: flex;
       align-items: center;

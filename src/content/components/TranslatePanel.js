@@ -4,6 +4,7 @@ import ReactDOM from "react-dom";
 import { getSettings } from "src/settings/settings";
 import "../styles/TranslatePanel.scss";
 import { getBackgroundColor, getCandidateFontColor, getResultFontColor } from "../../settings/defaultColors";
+import DictionaryButton from "./DictionaryButton";
 
 const splitLine = text => {
   const regex = /(\n)/g;
@@ -23,6 +24,11 @@ export default class TranslatePanel extends Component {
 
     this.dragOffsets = { x: 0, y: 0 };
     this.isDragging = false;
+    this.shouldDictButtonShow = this.isSingleWorldSelected() && getSettings("isDictEnable")
+  }
+
+  isSingleWorldSelected = () => {
+    return this.props.selectedText.trim().split(' ').length === 1
   }
 
   componentDidMount = () => {
@@ -193,6 +199,12 @@ export default class TranslatePanel extends Component {
         ref="panel"
         style={panelStyles}
       >
+        {this.shouldDictButtonShow &&
+          <DictionaryButton
+            resultText={this.props.resultText}
+            selectedText={this.props.selectedText}
+          />
+        }
         <div className="simple-translate-result-wrapper" ref="wrapper" style={wrapperStyles}>
           <div className="simple-translate-move" draggable="true" ref="move"></div>
           <div className="simple-translate-result-contents">
